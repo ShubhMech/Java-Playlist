@@ -14,7 +14,7 @@ class HaiMeri {
 }
 
 abstract class Nomad extends Oolala {
-//    abstract void new1();
+   abstract void new1();
     void fffff(){
         System.out.println("sdgyusgdcycsjhh");
     }
