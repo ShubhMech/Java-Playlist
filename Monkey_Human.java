@@ -17,6 +17,9 @@ class Human extends Monkey{
     public void sleep(){
         System.out.println("So ja bhosdike");
     }
+    public void napharious(){
+        System.out.println("Yo monkey so napharius!");
+    }
 }
 
 public class Monkey_Human {
@@ -26,5 +29,8 @@ public class Monkey_Human {
         h1.sleep();
         h1.bite();
         h1.jump();
+        Monkey m1 = new Human();
+//        m1.napharius(); Polymorphism. Can't use napharius method here.
+
     }
 }
