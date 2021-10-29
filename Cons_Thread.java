@@ -9,7 +9,7 @@ class Thr extends Thread{
     }
     public void run1() {
         int h=0;
-        while (h <= 1000) {
+        while (h <= 10) {
             System.out.println("Kulllllllllllllllllllllllllllllllla");
             h++;
         }
@@ -17,7 +17,7 @@ class Thr extends Thread{
 
     public void run2() {
         int h1=0;
-        while (h1 <= 1000) {
+        while (h1 <= 10) {
             System.out.println("Khulla");
             h1++;
         }
@@ -30,16 +30,35 @@ public class Cons_Thread {
         thr.start();
         System.out.println(thr.getId());
         System.out.println(thr.getName());
-        System.out.println(thr.getPriority());
+
 
         Thr thr2= new Thr("Mishra's Thread");
         thr2.start();
         System.out.println(thr2.getId());
         System.out.println(thr2.getName());
-        System.out.println(thr2.getPriority());
+
+
+        Thr thr3= new Thr("Swati's Thread");
+        thr3.start();
+        System.out.println(thr3.getId());
+        System.out.println(thr3.getName());
+
+
+        Thr thr4= new Thr("Dixit's Thread");
+        thr4.start();
+        System.out.println(thr4.getName());
+
 
         thr.run2();
-        thr2.run1();;
+        thr2.run1();
+        thr2.setPriority(Thread.NORM_PRIORITY);
+        thr3.setPriority(Thread.MAX_PRIORITY);
+        thr4.setPriority(Thread.MIN_PRIORITY);
+
+        System.out.println(thr4.getPriority());
+        System.out.println(thr2.getPriority());
+        System.out.println(thr.getPriority());
+        System.out.println(thr3.getPriority());
     }
 
 }
